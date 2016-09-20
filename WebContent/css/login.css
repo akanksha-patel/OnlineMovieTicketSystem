@@ -1,0 +1,64 @@
+@CHARSET "ISO-8859-1";
+
+#warn {
+	color: red;
+	font-size: 12px;
+	text-align: right;
+}
+
+.lbl {
+	font-family: verdana;
+	font-size: 18px;
+	width: 35%;
+	text-align: right;
+	padding-top: 5px;
+}
+
+form {
+	position: absolute;
+	left: 200px;
+	top: 150px;
+	width: 550px;
+	height: 300px;
+	background-color: #e7cfe4;
+	border-radius: 5px;
+	font-family: verdana;
+	box-shadow: 10px 10px 5px #2a0b08;
+	background-color: #e7cfe4;
+}
+
+.cln {
+	width: 2%;
+}
+
+.txtfldtd {
+	width: 63%;
+}
+
+#title {
+	font-family: Constantia;
+	font-weight: bold;
+	padding-bottom: 10px;
+	font-size: 22px;
+	text-align: center;
+	text-decoration: underline;
+}
+
+body {
+	background-color: white;
+}
+
+#btn {
+	position: absolute;
+	color: white;
+	left: 200px;
+	top: 150px;
+	width: 150px;
+	height: 300px;
+	left: 200px;
+	top: 150px;
+}
+
+.txtfld {
+	width: 180px;
+}

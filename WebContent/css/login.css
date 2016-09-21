@@ -24,7 +24,6 @@ form {
 	border-radius: 5px;
 	font-family: verdana;
 	box-shadow: 10px 10px 5px #2a0b08;
-	background-color: #e7cfe4;
 }
 
 .cln {
@@ -61,4 +60,17 @@ body {
 
 .txtfld {
 	width: 180px;
+}
+
+#error{
+	
+	color:red;
+	font-size:20px;
+	font-family:verdana;
+	/* width:500px;
+	top:20px;
+	float:left;
+	text-align:center; */
+	padding:4px;
+	
 }

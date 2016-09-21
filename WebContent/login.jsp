@@ -6,14 +6,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/login.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/header.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/footer.css">
 <title>Login Page</title>
 </head>
 <body>
-	<form action="">
+<div >
+	<% String msg =(String)request.getAttribute("msg"); %>
+	<%if(msg!=null){%>
+	<div id="error">
+		<%=" *"+msg %>
+	</div>
+	
+	<%} %>
+</div>
+	<form action="LoginServlet" method="post">
 		<table>
 			<tr>
 				<th colspan="3" id="title">LOGIN FORM</th>
@@ -33,13 +38,6 @@
 			</tr>
 
 			<tr>
-				<td class="lbl">Re-Enter Password</td>
-				<td class="cln">:</td>
-				<td class="txtfldtd"><input type="password" name="repassword"
-					class="txtfld" required></td>
-			</tr>
-
-			<tr>
 				<td id="btn"><input type="submit" value="LOGIN" class="txtfld">
 				</td>
 			</tr>
@@ -50,5 +48,6 @@
 
 		</table>
 	</form>
+
 </body>
 </html>

@@ -1,0 +1,15 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background-color: #e7cfe4;
+}
+
+#title {
+	font-family: Tahoma, sans-serif;
+	font-weight: bold;
+	padding-bottom: 10px;
+	font-size: 22px;
+	text-align: center;
+	text-decoration: underline;
+}
+

@@ -21,13 +21,17 @@ public class Movies {
 	
 
 	public Movies() {
-		movies.add(new Movie("priyansh part time", "pvr", 10, new Time(07, 07, 07),new Time(10, 07, 07)));
-		movies.add(new Movie("lala ke daat", "pvr", 10, new Time(06, 07, 07),new Time(11, 07, 07)));
-		movies.add(new Movie("pooja ka pagalpan", "pvr", 10, new Time(05, 07, 07),new Time(12, 07, 07)));
-		movies.add(new Movie("harsimar ka keher", "pvr", 10, new Time(04, 07, 07),new Time(13, 07, 07)));
-		movies.add(new Movie("pikachu ka current", "pvr", 10, new Time(03, 07, 07),new Time(14, 07, 07)));
-		movies.add(new Movie("pikachu ki wapasi", "pvr", 10, new Time(02, 07, 07),new Time(15, 07, 07)));
-		movies.add(new Movie("gaurav madhe charbi aahe", "pvr", 10, new Time(01, 07, 07),new Time(16, 07, 07)));
+		movies.add(new Movie(1,"dhoom", "pvr", 10,"12 p.m","3 p.m"));
+		movies.add(new Movie(2,"luv story 2015", "cinemax", 40, "3 p.m","6 p.m"));
+		movies.add(new Movie(3,"titanic", "imax", 30, "3 p.m","6 p.m"));
+		movies.add(new Movie(4,"chak de india", "cinemax", 10, "6 p.m","9 p.m"));
+		movies.add(new Movie(5,"sanam re", "pvr", 30, "6 p.m","9 p.m"));
+		movies.add(new Movie(6,"luv aaj kal", "pvr", 20, "12 p.m","3 p.m"));
+		movies.add(new Movie(7,"pyar ke side effects", "inox", 10, "3 p.m","6 p.m"));
+		movies.add(new Movie(8,"pink", "inox", 10, "9 a.m","12 a.m"));
+		movies.add(new Movie(9,"baar baar dekho", "imax", 10, "6 p.m","12 a.m"));
+		movies.add(new Movie(10,"black", "cinemax", 10, "9 a.m","12 p.m"));
+		movies.add(new Movie(11,"blue", "pvr", 10, "9 p.m","12 a.m"));
 	}
 
 }

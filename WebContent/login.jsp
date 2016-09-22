@@ -6,18 +6,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/login.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/home.css">
+
 <title>Login Page</title>
 </head>
 <body>
-<div >
-	<% String msg =(String)request.getAttribute("msg"); %>
-	<%if(msg!=null){%>
-	<div id="error">
-		<%=" *"+msg %>
+
+	<div>
+		<%
+			String msg = (String) request.getAttribute("msg");
+		%>
+		<%
+			if (msg != null) {
+		%>
+		<div id="error">
+			<%=" *" + msg%>
+		</div>
+
+		<%
+			}
+		%>
 	</div>
-	
-	<%} %>
-</div>
 	<form action="LoginServlet" method="post">
 		<table>
 			<tr>
@@ -38,16 +48,20 @@
 			</tr>
 
 			<tr>
-				<td id="btn"><input type="submit" value="LOGIN" class="txtfld">
+				<td class="btn"><input type="submit" value="LOGIN" class="txtfld">
 				</td>
 			</tr>
 
 			<tr>
 				<td id="warn">*All Fields Are Mandatory</td>
+				
 			</tr>
 
 		</table>
 	</form>
+
+
+
 
 </body>
 </html>

@@ -32,14 +32,15 @@ public class LoginServlet extends HttpServlet {
 		
 		if(users.getUsers().contains(user)){
 			session.setAttribute("user", user);
-			nextPage="movieShows.jsp";
+			response.sendRedirect("MovieServlet");
 			
 		}else{
 			request.setAttribute("msg", msg);
+			response.sendRedirect(nextPage);
+			
 		}
 		
-		RequestDispatcher dispatcher = request.getRequestDispatcher(nextPage);
-		dispatcher.forward(request, response);
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

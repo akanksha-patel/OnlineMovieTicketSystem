@@ -5,29 +5,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Movie {
+	private int movieId;
 	private String movieName;
 	private String theaterName;
 	private int seatAvailable;
-	private Time startTime;
-	private Time endTime;
+	private String startTime;
+	private String endTime;
 
 	@Override
 	public String toString() {
-		return movieName + " " + theaterName + " " + seatAvailable + " " + seatAvailable + " " + startTime + " "
+		return movieId+ " " +movieName + " " + theaterName + " " + seatAvailable + " " + seatAvailable + " " + startTime + " "
 				+ endTime;
 	}
 
-	public Movie() {
-
-	}
-
-	public Movie(String movieName, String theaterName, int seatAvailable, Time startTime, Time endTime) {
+	public Movie(int movieId,String movieName, String theaterName, int seatAvailable, String startTime, String endTime) {
 		super();
+		this.movieId = movieId;
 		this.movieName = movieName;
 		this.theaterName = theaterName;
 		this.seatAvailable = seatAvailable;
 		this.setStartTime(startTime);
 		this.setEndTime(endTime);
+	}
+	
+	public Movie(){
+		
 	}
 
 	public String getMovieName() {
@@ -53,21 +55,31 @@ public class Movie {
 	public void setSeatAvailable(int seatAvailable) {
 		this.seatAvailable = seatAvailable;
 	}
-
-	public Time getStartTime() {
+	
+	public String getStartTime() {
 		return startTime;
 	}
 
-	public void setStartTime(Time startTime) {
+	public void setStartTime(String startTime) {
 		this.startTime = startTime;
 	}
 
-	public Time getEndTime() {
+	public String getEndTime() {
 		return endTime;
 	}
 
-	public void setEndTime(Time endTime) {
+	public void setEndTime(String endTime) {
 		this.endTime = endTime;
 	}
+	
+	public int getMovieId() {
+		return movieId;
+	}
 
+	public void setMovieId(int movieId) {
+		this.movieId = movieId;
+	}
+
+
+	
 }

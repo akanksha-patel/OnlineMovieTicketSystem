@@ -30,3 +30,29 @@ td
 {
     padding:0 30px 0 30px;
 }
+
+#lnk{
+    width: 115px;
+    height: 25px; 
+    background: pink;
+    padding: 3px;
+    text-align: center;
+    color: black;
+    text-decoration: blink;
+    box-shadow: 5px 5px 2px #2a0b08;
+}
+}
+
+a:link, a:visited { 
+    color: black;
+    text-decoration: underline;
+    cursor: auto;
+}
+
+a:link:active, a:visited:active { 
+    color: pink;
+}
+
+table{
+	border-spacing: 5px;
+}

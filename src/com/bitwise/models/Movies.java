@@ -33,5 +33,7 @@ public class Movies {
 		movies.add(new Movie(10,"black", "cinemax", 10, "9 a.m","12 p.m"));
 		movies.add(new Movie(11,"blue", "pvr", 10, "9 p.m","12 a.m"));
 	}
+	
+
 
 }

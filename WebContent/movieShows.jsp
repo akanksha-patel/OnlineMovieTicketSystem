@@ -18,7 +18,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form id="form" action="">
+	<form id="form" >
 		<div id="title">WELCOME TO THE MOVIE TICKET BOOKING SYSTEM</div>
 
 
@@ -38,8 +38,9 @@
 						<td>Movie <c:out value="${movie.getMovieId()}" /></td>
 						<td><c:out value="${movie.getMovieName()}" /></td>
 						<td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
-						<td><a href="MovieServlet?movieId=${movie.getMovieId()}">MOVIE DETAIL</a></td>
+						<td><a id="lnk" href="MovieDetailServlet?movieId=${movie.getMovieId()}">Movie Detail</a></td>
 					</tr>
+					<tr></tr>
 				</c:forEach>
 			</table>
 

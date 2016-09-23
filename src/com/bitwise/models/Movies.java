@@ -19,6 +19,16 @@ public class Movies {
 		return  movies+" " ;
 	}
 	
+	public Movie getMovieDetailById(int movieId, Movies movies) {
+
+		for (Movie movie : movies.getMovies()) {
+			if (movie.getMovieId() == movieId) {
+				return movie;
+			}
+		}
+		return null;
+	}
+	
 
 	public Movies() {
 		movies.add(new Movie(1,"dhoom", "pvr", 10,"12 p.m","3 p.m"));

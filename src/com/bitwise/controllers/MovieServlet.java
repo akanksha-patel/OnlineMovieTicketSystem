@@ -16,20 +16,26 @@ import com.bitwise.models.Movies;
 @WebServlet("/MovieServlet")
 public class MovieServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-  
-    public MovieServlet() {
-        super();
-       
-    }
 
+	public MovieServlet() {
+		super();
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		if(session.getAttribute("movies")!=null){
+		if (session.getAttribute("movies") != null) {
+			System.out.println("im old user");
+			Movies movies = (Movies)session.getAttribute("movies");
+			session.setAttribute("movies", movies);
+		} else {
+			System.out.println("im new user");
 			Movies movies = new Movies();
 			session.setAttribute("movies", movies);
+
 		}
-		
+
 		request.getRequestDispatcher("movieShows.jsp").include(request, response);
 	}
 

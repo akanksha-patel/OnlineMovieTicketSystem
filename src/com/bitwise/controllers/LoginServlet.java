@@ -16,36 +16,29 @@ import com.bitwise.models.Users;
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-  
-    public LoginServlet() {
-        super();
-    }
-    
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	public LoginServlet() {
+		super();
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		String msg="INVALID CREDENTIALS";
-		String nextPage="login.jsp";
+		String msg = "INVALID CREDENTIALS";
+		String nextPage = "login.jsp";
 		User user = new User(email, password);
 		Users users = new Users();
-		
-		if(users.getUsers().contains(user)){
-			session.setAttribute("user", user);
-			response.sendRedirect("MovieServlet");
-			
-		}else{
-			request.setAttribute("msg", msg);
-			response.sendRedirect(nextPage);
-			
-		}
-		
-		
-	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		doGet(request, response);
+		if (users.getUsers().contains(user)) {
+			session.setAttribute("user", user);
+			nextPage = "MovieServlet";
+
+		} else {
+			request.setAttribute("msg", msg);
+		}
+		response.sendRedirect(nextPage);
 	}
 
 }

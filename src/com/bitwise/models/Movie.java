@@ -14,11 +14,12 @@ public class Movie {
 
 	@Override
 	public String toString() {
-		return movieId+ " " +movieName + " " + theaterName + " " + seatAvailable + " " + seatAvailable + " " + startTime + " "
-				+ endTime;
+		return movieId + " " + movieName + " " + theaterName + " " + seatAvailable + " " + seatAvailable + " "
+				+ startTime + " " + endTime;
 	}
 
-	public Movie(int movieId,String movieName, String theaterName, int seatAvailable, String startTime, String endTime) {
+	public Movie(int movieId, String movieName, String theaterName, int seatAvailable, String startTime,
+			String endTime) {
 		super();
 		this.movieId = movieId;
 		this.movieName = movieName;
@@ -27,10 +28,12 @@ public class Movie {
 		this.setStartTime(startTime);
 		this.setEndTime(endTime);
 	}
-	
-	public Movie(){
-		
+
+	public Movie() {
+
 	}
+
+	
 
 	public String getMovieName() {
 		return movieName;
@@ -55,7 +58,7 @@ public class Movie {
 	public void setSeatAvailable(int seatAvailable) {
 		this.seatAvailable = seatAvailable;
 	}
-	
+
 	public String getStartTime() {
 		return startTime;
 	}
@@ -71,7 +74,7 @@ public class Movie {
 	public void setEndTime(String endTime) {
 		this.endTime = endTime;
 	}
-	
+
 	public int getMovieId() {
 		return movieId;
 	}
@@ -80,6 +83,4 @@ public class Movie {
 		this.movieId = movieId;
 	}
 
-
-	
 }

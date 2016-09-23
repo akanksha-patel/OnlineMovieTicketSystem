@@ -17,6 +17,7 @@ import com.bitwise.models.Movies;
 @WebServlet("/MovieDetailServlet")
 public class MovieDetailServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
        
    
     public MovieDetailServlet() {
@@ -25,21 +26,16 @@ public class MovieDetailServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		HttpSession session = request.getSession();
 		int movieId = Integer.parseInt(request.getParameter("movieId"));
-		System.out.println(getMovieDetailById(movieId));
+		
+		if(session.getAttribute("movies")!=null){
+			Movies movies = (Movies) session.getAttribute("movies");
+			Movie movieDetail = movies.getMovieDetailById(movieId,movies);
+			session.setAttribute("movieDetail", movieDetail);
+		}
 		request.getRequestDispatcher("movieDetails.jsp").forward(request, response);
 	}
-	
-	public Movie getMovieDetailById(int movieId){
-		Movies movies = new Movies();
-		for(Movie movie:movies.getMovies()){
-			if(movie.getMovieId()==movieId){
-				return movie;
-			}
-		}
-		return null;
-	}
-	
+
 	
 }

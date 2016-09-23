@@ -15,7 +15,7 @@
 	href="${pageContext.request.contextPath}/css/movie.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/home.css">
-<title>Insert title here</title>
+<title>Movie Shows</title>
 </head>
 <body>
 	<form id="form" >

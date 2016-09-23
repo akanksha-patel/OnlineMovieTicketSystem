@@ -37,27 +37,27 @@ public class MovieBookServlet extends HttpServlet {
 				System.out.println("new");
 				initializeCart(movieId, movieName, theaterName, seatsAvailable, startTime, endTime, session);
 				System.out.println("initialized");
-				request.getRequestDispatcher("movieBooking.jsp").forward(request, response);
+				
 				
 			} else {
 				System.out.println("old");
 				addItemToCart(movieId, movieName, theaterName, seatsAvailable, startTime, endTime, session);
-				response.sendRedirect("movieBooking.jsp");
+				
 			}
 		}
 
 		if (submit.equals("REMOVE SHOW")) {
 			if (isCartNotEmpty(session)) {
 				removeItemFromCart(movieId, movieName, theaterName, seatsAvailable, startTime, endTime, session);
-				response.sendRedirect("movieBooking.jsp");
+				
 			}
 		}
 
 		if (submit.equals("DISPLAY CART")) {
 			if (isCartNotEmpty(session)) {
-				response.sendRedirect("movieBooking.jsp");
 			}
 		}
+		request.getRequestDispatcher("movieBooking.jsp").forward(request, response);
 
 	}
 

@@ -4,8 +4,8 @@ form {
 	position: absolute;
 	left: 290px;
 	top: 170px;
-	width: 720px;
-	height: 520px;
+	width: auto;
+	height: auto;
 	background-color: white;
 	border-radius: 5px;
 	font-family: verdana;
@@ -26,14 +26,14 @@ form {
   background-color: pink;
 }
 
-td
+/* td
 {
     padding:0 25px 0 25px;
-}
+} */
 
 #lnk{
-    width: 115px;
-    height: 25px; 
+    width: auto;
+    height: auto; 
     background: pink;
     padding: 3px;
     text-align: center;

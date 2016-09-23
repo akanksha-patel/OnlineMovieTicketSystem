@@ -15,11 +15,11 @@
 }
 
 form {
-	position: absolute;
-	left: 320px;
-	top: 270px;
-	width: 550px;
-	height: 300px;
+	/* position: absolute; */
+	left: 290px;
+	top: 170px;
+	width: auto;
+	height: auto;
 	border-radius: 5px;
 	font-family: verdana;
 	box-shadow: 10px 10px 5px #2a0b08;

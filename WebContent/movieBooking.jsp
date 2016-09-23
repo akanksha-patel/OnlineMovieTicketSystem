@@ -16,7 +16,7 @@
 <body>
 
 
-<form id="form" action="MovieServlet">
+<form id="form" action="MovieServlet" >
 	<div id="title">YOUR BOOKING</div>
 
 	<c:if test="${ not empty shows.getList() }" var="movie" >
@@ -42,6 +42,7 @@
 				<td><c:out value="${requestScope.seats}" /></td>
 				<td><c:out value="${movie.getStartTime()}" /></td>
 				<td><c:out value="${movie.getEndTime()}" /></td>
+				<td><a id="lnk" class="btn" href="MovieDetailServlet?movieId=${movie.getMovieId()}">REMOVE</a></td>
 			</tr>
 			</c:forEach>
 			
